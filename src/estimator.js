@@ -27,7 +27,7 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
 };
 
   return covid19ImpactEstimator(resultantReport);
-};
+}; 
 
 const covid19CaptureFunction = (name, avgAge, avgDailyIncomeInUSD,
   avgDailyIncomePopulation, periodType, timeToElapse, reportedCases,
