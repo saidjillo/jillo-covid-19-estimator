@@ -1,7 +1,6 @@
 const covid19ImpactEstimator = (data) => data;
 
 
-
 const covid19DataReport = (regionData, periodType,timeToElapse,reportedCases, population,totalHospitalBeds) => {
  
     const resultantReport = {};
@@ -48,7 +47,5 @@ const covid19CaptureFunction = (name,avgAge,avgDailyIncomeInUSD,avgDailyIncomePo
     return covid19DataReport(regionData, periodType,timeToElapse,reportedCases, population,totalHospitalBeds);
 }
 
-
-covid19CaptureFunction("Africa",19.7,5,0.71,"days",58,674, 66622705,1380614);
 
 export default covid19ImpactEstimator;
