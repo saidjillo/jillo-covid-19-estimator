@@ -27,15 +27,14 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
   return covid19ImpactEstimator(resultantReport);
 };
 
-const covid19CaptureFunction = 
-  (name,avgAge, avgDailyIncomeInUSD,
-    avgDailyIncomePopulation,periodType, timeToElapse, reportedCases,
-    population, totalHospitalBeds) => {   
-  const regionData = {
-        name: name,
-        avgAge: avgAge,
-        avgDailyIncomeInUSD: avgDailyIncomeInUSD,
-        avgDailyIncomePopulation: avgDailyIncomePopulation
+const covid19CaptureFunction = (name, avgAge, avgDailyIncomeInUSD,
+    avgDailyIncomePopulation, periodType, timeToElapse, reportedCases,
+    population, totalHospitalBeds) => {
+    const regionData = {
+      name: name,
+      avgAge: avgAge,
+      avgDailyIncomeInUSD: avgDailyIncomeInUSD,
+      avgDailyIncomePopulation: avgDailyIncomePopulation
   };
   return covid19DataReport(regionData, periodType, timeToElapse, 
     reportedCases, population, totalHospitalBeds);
