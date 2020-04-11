@@ -1,15 +1,15 @@
 const covid19ImpactEstimator = (data) => data;
 
-const covid19DataReport = (regionData, periodType, timeToElapse, 
+const covid19DataReport = (regionData, periodType, timeToElapse,
   reportedCases, population, totalHospitalBeds) => {
   const resultantReport = {};
   resultantReport.data = {
-    region: {
-        name: regionData.region,
-        avgAge: regionData.avgAge,
-        avgDailyIncomeInUSD: regionData.avgDailyIncomeInUSD,
-        avgDailyIncomePopulation: regionData.avgDailyIncomePopulation
-        },
+  region: {
+    name: regionData.region,
+    avgAge: regionData.avgAge,
+    avgDailyIncomeInUSD: regionData.avgDailyIncomeInUSD,
+    avgDailyIncomePopulation: regionData.avgDailyIncomePopulation
+    },
     periodType: periodType,
     timeToElapse: timeToElapse,
     reportedCases: reportedCases,
@@ -31,10 +31,10 @@ const covid19CaptureFunction = (name, avgAge, avgDailyIncomeInUSD,
     avgDailyIncomePopulation, periodType, timeToElapse, reportedCases,
     population, totalHospitalBeds) => {
     const regionData = {
-      name: name,
-      avgAge: avgAge,
-      avgDailyIncomeInUSD: avgDailyIncomeInUSD,
-      avgDailyIncomePopulation: avgDailyIncomePopulation
+    name: name,
+    avgAge: avgAge,
+    avgDailyIncomeInUSD: avgDailyIncomeInUSD,
+    avgDailyIncomePopulation: avgDailyIncomePopulation
   };
   return covid19DataReport(regionData, periodType, timeToElapse, 
     reportedCases, population, totalHospitalBeds);
