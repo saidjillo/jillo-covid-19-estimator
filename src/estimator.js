@@ -4,11 +4,11 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
   reportedCases, population, totalHospitalBeds) => {
   const resultantReport = {};
   resultantReport.data = {
-  region: {
-    name: regionData.region,
-    avgAge: regionData.avgAge,
-    avgDailyIncomeInUSD: regionData.avgDailyIncomeInUSD,
-    avgDailyIncomePopulation: regionData.avgDailyIncomePopulation
+    region: {
+      name: regionData.region,
+      avgAge: regionData.avgAge,
+      avgDailyIncomeInUSD: regionData.avgDailyIncomeInUSD,
+      avgDailyIncomePopulation: regionData.avgDailyIncomePopulation
     },
     periodType: periodType,
     timeToElapse: timeToElapse,
@@ -28,9 +28,9 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
 };
 
 const covid19CaptureFunction = (name, avgAge, avgDailyIncomeInUSD,
-    avgDailyIncomePopulation, periodType, timeToElapse, reportedCases,
-    population, totalHospitalBeds) => {
-    const regionData = {
+  avgDailyIncomePopulation, periodType, timeToElapse, reportedCases,
+  population, totalHospitalBeds) => {
+  const regionData = {
     name: name,
     avgAge: avgAge,
     avgDailyIncomeInUSD: avgDailyIncomeInUSD,
