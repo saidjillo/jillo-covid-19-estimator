@@ -17,7 +17,7 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
         totalHospitalBeds: totalHospitalBeds
     };
     resultantReport.impact = {
-        currentlyInfected: reportedCases * 10,
+    currentlyInfected: reportedCases * 10,
         infectionsByRequestedTime: currentlyInfected * 1024
     };
     resultantReport.severeImpact = {
@@ -30,8 +30,8 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
 
 const covid19CaptureFunction = 
     (name,avgAge, avgDailyIncomeInUSD,
-        avgDailyIncomePopulation,periodType, timeToElapse, reportedCases,
-        population, totalHospitalBeds) => {   
+    avgDailyIncomePopulation,periodType, timeToElapse, reportedCases,
+    population, totalHospitalBeds) => {   
     const regionData = {
         name: name,
         avgAge: avgAge,
