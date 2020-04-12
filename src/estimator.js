@@ -23,7 +23,9 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
   };
   resultantReport.severeImpact = {
     currentlyInfected: reportedCases * 50,
-    infectionsByRequestedTime: reportedCases * 50 * 1024
+    infectionsByRequestedTime: reportedCases * 50 * 1024,
+    severeCasesByRequestedTime: 0.15 * reportedCases * 50 * 1024,
+    hospitalBedsByRequestedTime: 0.35 * totalHospitalBeds,
   };
   return covid19ImpactEstimator(resultantReport);
 };
