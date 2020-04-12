@@ -19,11 +19,11 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
   };
   resultantReport.impact = {
     currentlyInfected: reportedCases * 10,
-    infectionsByRequestedTime: currentlyInfected * 1024
+    infectionsByRequestedTime: reportedCases * 10 * 1024
   };
   resultantReport.severeImpact = {
     currentlyInfected: reportedCases * 50,
-    infectionsByRequestedTime: currentlyInfected * 1024
+    infectionsByRequestedTime: reportedCases * 50 * 1024
   };
   return covid19ImpactEstimator(resultantReport);
 };
