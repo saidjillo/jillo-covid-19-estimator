@@ -11,14 +11,14 @@ const covid19DataReport = (regionData, periodType, timeToElapse,
       avgDailyIncomeInUSD: regionData.avgDailyIncomeInUSD,
       avgDailyIncomePopulation: regionData.avgDailyIncomePopulation
     },
-    periodType: periodType,
-    timeToElapse: timeToElapse,
-    reportedCases: reportedCases,
-    population: population,
-    totalHospitalBeds: totalHospitalBeds
+    periodType,
+    timeToElapse,
+    reportedCases,
+    population,
+    totalHospitalBeds
   };
   resultantReport.impact = {
-  currentlyInfected: reportedCases * 10,
+    currentlyInfected: reportedCases * 10,
     infectionsByRequestedTime: currentlyInfected * 1024
   };
   resultantReport.severeImpact = {
@@ -36,7 +36,7 @@ const covid19CaptureFunction = (name, avgAge, avgDailyIncomeInUSD,
     avgDailyIncomeInUSD,
     avgDailyIncomePopulation
   };
-  return covid19DataReport(regionData, periodType, timeToElapse, 
+  return covid19DataReport(regionData, periodType, timeToElapse,
     reportedCases, population, totalHospitalBeds);
 };
 
